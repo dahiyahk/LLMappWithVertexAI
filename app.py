@@ -113,6 +113,8 @@ def get_chat(model_name: str):
 
         # TODO: Define the generate_content configuration, including tools
         generate_content_config = types.GenerateContentConfig(
+            temperature=temperature,
+            top_p=top_p,
             system_instruction=[types.Part.from_text(text=system_instructions)],
             tools=[tools] # Pass the tool definition here
         )
